@@ -1,15 +1,20 @@
 import React from 'react';
-import Tela from './components/Screen'
-import Buttons from './components/Buttons'
+
+import Main from './components/Main'
+import {initialState} from './components/funcoes/funcoes'
 
 
-function App() {
-  return (
-    <div>
-      <Tela value={"100/23-34"}/>
-      <Buttons/>
-    </div>
-  );
+
+class App extends React.Component{
+  state=({...initialState})
+  render(){
+
+    return (
+      <div>
+        <Main/>
+      </div>
+    );
+  }
 }
 
 export default App;
